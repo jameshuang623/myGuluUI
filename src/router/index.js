@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Button from "../components/Button";
+import ButtonPage from "../views/ButtonPage";
 
 Vue.use(VueRouter)
 
@@ -16,7 +16,7 @@ const routes = [
     },
     {
         path: '/button',
-        component: Button,
+        component: ButtonPage,
     }
 ]
 
