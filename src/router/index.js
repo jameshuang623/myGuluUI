@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ButtonPage from "../views/ButtonPage";
+import InputPage from "../views/InputPage";
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,11 @@ const routes = [
     },
     {
         path: '/button',
-        component: ButtonPage,
+        component: ButtonPage
+    },
+    {
+        path: '/input',
+        component: InputPage
     }
 ]
 

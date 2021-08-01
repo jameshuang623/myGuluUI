@@ -1,7 +1,11 @@
 <template>
   <div>
     <router-link to="/button">
-      组件一
+      button 组件
+    </router-link>
+    |
+    <router-link to="/input">
+      input 组件
     </router-link>
 
 

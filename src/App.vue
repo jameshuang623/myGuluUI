@@ -15,6 +15,11 @@
   margin: 20px;
 }
 
+
+body {
+  font-size: var(--font-size);
+}
+
 #nav {
   padding: 30px;
 
