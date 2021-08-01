@@ -1,14 +1,20 @@
 <template>
   <div class="wrapper">
-    <g-button>按钮</g-button>
-    <g-button icon="settings">按钮</g-button>
-    <g-button icon="settings" iconPosition="right">按钮</g-button>
+    <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
+    <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
+    <g-button icon="settings" iconPosition="right" :loading="loading3" @click="loading3 = !loading3">按钮</g-button>
   </div>
 </template>
 
 <script lang="js">
 export default {
-  name: "ButtonPage"
+  data() {
+    return {
+      loading1: false,
+      loading2: true,
+      loading3: false
+    }
+  }
 }
 </script>
 
