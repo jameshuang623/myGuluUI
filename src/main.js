@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Button from "./components/Button";
-import Icon from "./views/Icon";
+import Icon from "./components/Icon";
 import ButtonGroup from "./components/ButtonGroup";
 
 Vue.config.productionTip = false
