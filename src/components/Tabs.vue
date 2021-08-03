@@ -39,7 +39,16 @@ export default {
     // this.$emit('update:selected', '这是 this $emit 出来的数据')
   },
   mounted() {
-    this.eventBus.$emit('update:selected', this.selected)
+    this.$children.forEach((vm) => {
+      if (vm.$options.name === 'TabsHeader'){
+        vm.$children.forEach((childVm) => {
+          if (childVm.$options.name === 'TabsItem' && childVm.name === this.selected){
+            this.eventBus.$emit('update:selected', this.selected, childVm)
+          }
+        })
+      }
+    })
+    // this.eventBus.$emit('update:selected', this.selected)
     // this.$emit('update:selected', '这是 this $emit 出来的数据')
   }
 }
