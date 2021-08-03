@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ButtonPage from "../views/ButtonPage";
 import InputPage from "../views/InputPage";
+import TabPage from "../views/TabPage";
 
 Vue.use(VueRouter)
 
@@ -13,16 +14,13 @@ const routes = [
     },
     {
         path: '/home',
-        component: Home
+        component: Home,
+        children:[
+            {path:'/home/button', component:ButtonPage},
+            {path:'/home/input', component:InputPage},
+            {path:'/home/tab', component:TabPage},
+        ]
     },
-    {
-        path: '/button',
-        component: ButtonPage
-    },
-    {
-        path: '/input',
-        component: InputPage
-    }
 ]
 
 
