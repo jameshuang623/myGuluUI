@@ -15,7 +15,7 @@ export default {
   },
   props: {
     name: {
-      type: String || Number,
+      type: String || Number, // String | Number 报错
       required: true
     }
   },

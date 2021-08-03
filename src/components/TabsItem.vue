@@ -18,7 +18,7 @@ export default {
       default: false
     },
     name:{
-      type: String || Number,
+      type: String || Number, // String | Number 报错
       required: true
     }
   },
@@ -48,6 +48,10 @@ export default {
 .tabs-item{
   flex-shrink: 0;
   padding: 0 1em;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
   &.active{
     background: red;
