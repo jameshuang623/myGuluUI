@@ -1,6 +1,16 @@
 <template>
   <div class="wrapper" :class="{'error': error}">  <!-- 如果 error存在，就有error类，否则无 -->
-    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"/>
+    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+           @change="$emit('change', $event.target.value)"
+           @input="$emit('input', $event.target.value)"
+    />
+<!--    @input="$emit('input', $event)"-->
+<!--    @focus="$emit('focus', $event)"-->
+<!--    @blur="$emit('blur', $event)"-->
+
+    <!-- input标签本身拥有 change 事件，当 change 触发之后，会触发一个事件对象名'change'，
+    $event 是浏览器原生的 change 事件，vue 通过这种方式传个下一个监听的人，第一个参数是事件名，
+    第二个往后是传参1，传参2……-->
     <template v-if="error"> <!-- <template>可以避免不必要的 div 标签，减少 CSS 设置-->
       <g-icon name="error" class="g-icon"></g-icon>
       <span class="errorMessage">{{error}}</span>

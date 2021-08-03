@@ -24,5 +24,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.wrapper{
+  > *{
+    margin-right: .5em;
+    margin-top: .5em;
+  }
+}
 </style>
