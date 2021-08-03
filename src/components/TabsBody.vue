@@ -6,10 +6,13 @@
 
 <script lang="js">
 export default {
-  name: "TabsBody"
+  name: "TabsBody",
+  inject:['eventBus'],
+  created() {
+  }
 }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 
 </style>

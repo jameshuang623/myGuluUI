@@ -5,6 +5,9 @@
 </template>
 
 <script lang="js">
+
+import Vue from "vue";
+
 export default {
   name: "Tab",
   props:{
@@ -20,13 +23,28 @@ export default {
       }
     }
   },
+  data(){
+    return{
+      eventBus: new Vue()
+    }
+  },
+  provide(){
+    return {
+      eventBus: this.eventBus
+    }
+  },
+
   created(){
     // this.$emit('update:selected', 'xxx')
+    // this.$emit('update:selected', '这是 this $emit 出来的数据')
+  },
+  mounted() {
+    this.eventBus.$emit('update:selected', this.selected)
+    // this.$emit('update:selected', '这是 this $emit 出来的数据')
   }
-
 }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 
 </style>

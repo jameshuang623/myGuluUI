@@ -1,13 +1,14 @@
 <template>
   <div class="wrapper">
-    <g-tabs selected.sync="selectedTab">
-<!--    <g-tabs selected="selectedTab" @update:selected="selectedTab = $event">-->
+    <g-tabs :selected.sync="selectedTab" @update:selected="yyy">
+      <!--    <g-tabs selected="selectedTab" @update:selected="selectedTab = $event">-->
       <g-tabs-head>
         <template slot="actions">
-          <button>设置</button>
+          <g-button>设置</g-button>
         </template>
         <g-tabs-item name="woman">
-          <g-icon name="settings"></g-icon>美女
+          <g-icon name="settings"></g-icon>
+          美女
         </g-tabs-item>
         <g-tabs-item name="finance" disabled>
           财经
@@ -33,10 +34,21 @@
 
 <script lang="js">
 export default {
-  name: "TabPage"
+  name: "TabPage",
+  data() {
+    return {
+      selectedTab: 'sports'
+    }
+  },
+  methods:{
+    yyy(data){
+      console.log('yyy')
+      console.log(data)
+    }
+  }
 }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 
 </style>
