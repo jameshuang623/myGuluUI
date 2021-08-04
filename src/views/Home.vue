@@ -12,6 +12,10 @@
       <router-link to="/home/tab">
         tab 组件
       </router-link>
+      |
+      <router-link to="/home/toast">
+        toast 组件
+      </router-link>
     </div>
     <div class="view">
       <router-view></router-view>
