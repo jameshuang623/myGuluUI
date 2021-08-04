@@ -5,6 +5,7 @@ import ButtonPage from "../views/ButtonPage";
 import InputPage from "../views/InputPage";
 import TabPage from "../views/TabPage";
 import ToastPage from "../views/ToastPage";
+import ProgressPage from "../views/ProgressPage";
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,7 @@ const routes = [
             {path:'/home/input', component:InputPage},
             {path:'/home/tab', component:TabPage},
             {path:'/home/toast', component:ToastPage},
+            {path:'/home/progress', component:ProgressPage},
         ]
     },
 ]
