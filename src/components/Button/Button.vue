@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/global.css";
+@import "../../assets/global.css";
 
 @keyframes spin {
   0%{

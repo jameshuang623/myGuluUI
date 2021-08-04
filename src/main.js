@@ -2,15 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import Icon from "./components/Icon";
-import ButtonGroup from "./components/ButtonGroup";
-import Input from "./components/Input";
-import Tabs from "./components/Tabs";
-import TabsHead from "./components/TabsHead";
-import TabsBody from "./components/TabsBody";
-import TabsItem from "./components/TabsItem";
-import TabsPanel from "./components/TabsPanel";
+import ButtonGroup from "./components/Button/ButtonGroup";
+import Input from "./components/Input/Input";
+import Tabs from "./components/Tab/Tabs";
+import TabsHead from "./components/Tab/TabsHead";
+import TabsBody from "./components/Tab/TabsBody";
+import TabsItem from "./components/Tab/TabsItem";
+import TabsPanel from "./components/Tab/TabsPanel";
 
 Vue.config.productionTip = false
 
