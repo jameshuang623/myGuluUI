@@ -14,7 +14,7 @@ import TabsItem from "./components/Tab/TabsItem";
 import TabsPanel from "./components/Tab/TabsPanel";
 import Toast from "./components/Toast/Toast";
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 Vue.use(plugin)
 
